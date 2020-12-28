@@ -29,7 +29,7 @@ export const Swapcart = props => {
 								{/* all of these need to check PuzzleFetch now */}
 								<Row className="d-flex justify-content-center">
 									<Card.Title>
-										<h4>{store.swapCart[0].name_of_puzzle}</h4>
+										<h4 className="white-bg">{store.swapCart[0].name_of_puzzle}</h4>
 									</Card.Title>
 								</Row>
 
@@ -74,7 +74,7 @@ export const Swapcart = props => {
 						</p>
 						<br />
 						<Button
-							variant="success"
+							className="button-redesign"
 							type="submit"
 							onClick={() => {
 								history.push("/pending");

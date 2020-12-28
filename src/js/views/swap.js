@@ -45,7 +45,7 @@ export const Swap = props => {
 	return (
 		<>
 			<Container>
-				<h1>Upload Your Puzzle</h1>
+				<h3>Upload Your Puzzle</h3>
 				<Form onSubmit={handleSubmit}>
 					<Form.Group controlId="formGroupPuzzle">
 						<Form.Label>Name of Puzzle</Form.Label>
@@ -94,7 +94,7 @@ export const Swap = props => {
 							<option>Other</option>
 						</Form.Control>
 					</Form.Group>
-					<Button variant="success" type="submit">
+					<Button className="button-redesign" type="submit">
 						Upload
 					</Button>
 				</Form>

@@ -42,14 +42,14 @@ export const RegisterPage = () => {
 	}
 
 	return (
-		<>
+		<div className="container">
 			{warning !== "" && (
 				<Alert className="text-center" variant="success">
 					{warning}
 				</Alert>
 			)}
 			<Form className="login-form" onSubmit={handleSubmit}>
-				<h4>Register</h4>
+				<h3>Register</h3>
 				<Form.Group controlId="fullName">
 					<Form.Label>Full Name</Form.Label>
 					<Form.Control
@@ -112,12 +112,12 @@ export const RegisterPage = () => {
 						onChange={e => setPassword(e.target.value)}
 					/>
 				</Form.Group>
-				<Button variant="success" type="submit">
+				<Button className="button-redesign" type="submit">
 					Register
 				</Button>
 				&nbsp; &nbsp; or &nbsp;
 				<Link to="/signin"> Cancel </Link>
 			</Form>
-		</>
+		</div>
 	);
 };

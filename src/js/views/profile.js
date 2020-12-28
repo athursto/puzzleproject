@@ -21,7 +21,6 @@ export const Profile = () => {
 					<div className="col-6 card-img float-right p-3">
 						<img
 							className="col-sm-6 rounded-circle"
-							//style={{ width: "140px", height: "140px", borderRadius: "70px" }}
 							src={avatar}
 							alt="profilePic"
 							width="100px"
@@ -53,47 +52,38 @@ export const Profile = () => {
 			</div>
 			<br />
 			<br />
-			<div className="col-7 m-auto">
-				<div className="row">
-					{store.user.info != null && store.user.info.puzzles_owned.length > 0 ? (
-						<div className="col-6">
-							<h5>You own this puzzle:</h5>
-							<br />
-
-							<p>{store.user && store.user.info && store.user.info.puzzles_owned[0].name_of_puzzle} </p>
-							<img
-								className="profilepuzzlepic"
-								src={
-									store.user && store.user.info && store.user.info.puzzles_owned[0].picture_of_puzzle
-								}
-							/>
-						</div>
-					) : (
-						<div className="col-6">
-							<Link to="/swap" className="btn btn-outline-info mt-5 p-3">
-								Please upload your Puzzle to start SWAPING
-							</Link>
-						</div>
-					)}
-
-					{store.swapCart ? (
-						<div className="col-6">
-							<h5>You borrowed this puzzle:</h5>
-							<br />
-							<p>{store.swapCart && store.swapCart[0].name_of_puzzle}</p>
-							<img
-								className="profilepuzzlepic"
-								src={store.swapCart && store.swapCart[0].picture_of_puzzle}
-							/>
-						</div>
-					) : (
-						<div className="col-6">
-							<Link to="/puzzles" className="btn btn-outline-info mt-5 p-3">
-								Browse Puzzles and add one to your cart!
-							</Link>
-						</div>
-					)}
-				</div>
+			<div className="row">
+				{store.user.info != null && store.user.info.puzzles_owned.length > 0 ? (
+					<div className="col-6">
+						<h3>You own this puzzle:</h3>
+						<br />
+						<h4>{store.user && store.user.info && store.user.info.puzzles_owned[0].name_of_puzzle} </h4>
+						<img
+							className="profilepuzzlepic"
+							src={store.user && store.user.info && store.user.info.puzzles_owned[0].picture_of_puzzle}
+						/>
+					</div>
+				) : (
+					<div className="col-6">
+						<Link to="/swap" className="btn btn-outline-info mt-5 p-3">
+							Please upload your puzzle to start swapping
+						</Link>
+					</div>
+				)}
+				{store.swapCart ? (
+					<div className="col-6">
+						<h3>You borrowed this puzzle:</h3>
+						<br />
+						<h4>{store.swapCart && store.swapCart[0].name_of_puzzle}</h4>
+						<img className="profilepuzzlepic" src={store.swapCart && store.swapCart[0].picture_of_puzzle} />
+					</div>
+				) : (
+					<div className="col-6">
+						<Link to="/puzzles" className="btn btn-outline-info mt-5 p-3">
+							Browse Puzzles and add one to your cart!
+						</Link>
+					</div>
+				)}
 			</div>
 		</div>
 	);

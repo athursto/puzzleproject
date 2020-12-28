@@ -35,14 +35,14 @@ export const CardRow = props => {
 									{store.user.info != null ? (
 										<React.Fragment>
 											<Button
-												variant="success"
+												className="button-redesign"
 												onClick={e => history.push(`/singlepuzzle/${index}`)}>
 												{" "}
 												See More
 											</Button>
 										</React.Fragment>
 									) : (
-										<Button variant="success" onClick={e => history.push("/signin")}>
+										<Button className="button-redesign" onClick={e => history.push("/signin")}>
 											{" "}
 											See More
 											{/* <Link to="/signin">See More</Link> */}

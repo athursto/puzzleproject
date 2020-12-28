@@ -10,7 +10,7 @@ export const Pending = props => {
 
 	return (
 		<div className="container">
-			<h1 className="text-center"> Success! </h1>
+			<h3 className="text-center"> Success! </h3>
 			<p className="text-center">
 				{" "}
 				Your order of <b>{store.swapCart[0].name_of_puzzle}</b> has been submitted. Our team will be in touch

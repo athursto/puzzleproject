@@ -1,9 +1,95 @@
 @import "colors";
 
-body{ 
-    background: $white;
+//body{
+    //background: $white
+//}
+
+body{
+    background: $lightteal;
 }
 
+
+p{
+        font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+h1,h2,h3,h4{
+    color: white;
+        font-family: 'Domine', serif;
+}
+
+h4{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+h3{
+        font-weight: 600;
+    font-size: 40px;
+}
+
+h1{
+            font-weight: 700;
+    font-size: 70px;
+}
+h2{
+                font-weight: 700;
+    font-size: 80px;
+}
+
+.white-bg {
+    color: $teal
+}
+
+.testing img{
+    filter: drop-shadow( 5px 5px 15px #ffffff);
+}
+
+.testing .btn-primary{
+    background-color: $burgundy;
+    color: white;
+}
+
+.btn-primary a {
+    color: white;
+    text-decoration: none;
+}
+
+.button-redesign{
+    background-color: $burgundy;
+    color: white;
+}
+
+.button-redesign:hover{
+    background-color: $teal;
+    color: white;
+}
+
+.button-redesign a{
+    color: white;
+    text-decoration: none;
+}
+
+.mynavbar a{
+    margin: .5rem;
+    text-decoration: none;
+    &:hover {
+        color: $teal;
+        text-decoration: none;
+    }
+}
+
+.mynavbar i{
+    margin: .5rem;
+    color: white;
+    text-decoration: none;
+    &:hover {
+        color: $teal;
+        text-decoration: none;
+    }
+}
 .container {
     height:100vh; 
 }
@@ -16,15 +102,22 @@ body{
 
 
 .jumbo-container{
-        border-radius: 0 !important;
-       background-image: 
-        linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-       url(https://images.unsplash.com/photo-1591040092219-081fb773589c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)
+        // border-radius: 0 !important;
+    //    background-image: 
+        // linear-gradient(
+    //   rgba(0, 0, 0, 0.5),
+    //   rgba(0, 0, 0, 0.5)
+    // ),
+    //    url(https://images.unsplash.com/photo-1591040092219-081fb773589c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)
 
+// removing all of this to get rid of background image and clean up design 
+background: none;
+}
 
+.jumbotron h1{
+    font-size: 7.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px $teal;
 }
 
  .profilepuzzlepic{
@@ -52,36 +145,67 @@ body{
 
    
     .footer{
-      background-color: $green;
+      background-color: $burgundy;
       height: 60px;
       width: 100%;
     }
-    // .footer {
-    //     background-color: $green;
-    //     height: 60px;
-    // bottom: 0;
-    // width: 100%;
-    // // background-attachment: scroll;
-    // // background-position: 0% 0%;
-    // position: fixed;
-    // margin-top: 25px;
-    // // z-index: 100;
-    // }
 
- h1, .test {font-family: 'Monoton', cursive;
-    font-size: 70px;
-    text-shadow: 2px 2px 4px #000000}
 
-.mynavbar {
-    margin-bottom: 15px;
+
+.bg-light {
+    background-color: $lightteal !important;
     //padding-right: 15px;
 }
+
+
 
 .card-img-top {
     height: 15vw;
     object-fit: cover;
     margin: auto;
 }
+
+.mynavbar {
+    margin: .5rem;
+}
+
+.card {
+    border-color: $teal;
+    border-width: 2px;
+}
+
+div[role='alert'] {
+  color: $burgundy;
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+.message-chars-left {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.status-message {
+  opacity: 0;
+}
+
+.success {
+  opacity: 1;
+  background-color: $teal;
+    width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.failure {
+  opacity: 1;
+  background-color: $burgundy;
+    width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
 
 //.card-title{
     //height: 30px;

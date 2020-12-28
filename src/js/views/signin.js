@@ -34,13 +34,13 @@ export const SignIn = () => {
 				</Alert>
 			)}
 			<Form className="login-form" onSubmit={handleSubmit}>
-				<h4>Sign in to your account</h4>
+				<h3>Sign in to your account</h3>
 				<br />
 				<Form.Group controlId="formBasicUsername">
 					<Form.Label>Username</Form.Label>
 					<Form.Control
 						type="text"
-						placeholder="Username"
+						placeholder="Username: sample"
 						value={username}
 						onChange={e => setUsername(e.target.value)}
 					/>
@@ -49,13 +49,13 @@ export const SignIn = () => {
 					<Form.Label>Password</Form.Label>
 					<Form.Control
 						type="password"
-						placeholder="Password"
+						placeholder="Password: 1234"
 						value={password}
 						onChange={e => setPassword(e.target.value)}
 					/>
 					<br />
 				</Form.Group>
-				<Button variant="success" type="submit">
+				<Button className="button-redesign" type="submit">
 					Sign In
 				</Button>
 				&nbsp; &nbsp; or &nbsp;

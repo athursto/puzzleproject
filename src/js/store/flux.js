@@ -1,5 +1,5 @@
 const getState = ({ getStore, getActions, setStore }) => {
-	const base_url = "https://puzzle-swap.herokuapp.com/";
+	const base_url = "https://puzzle-swap.herokuapp.com";
 	return {
 		store: {
 			user: {

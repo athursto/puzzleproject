@@ -11,15 +11,18 @@
     height: 100%;
 }
 
-a,.nav-link {
-    color: $green;
+a,.link {
+    color: white;
     &:visited { // a:visited
-        color: black;
+        color:$burgundy;
+        text-decoration: none;
     }
     &:hover {
-        color:black;
+        color: $teal;
+        text-decoration: none;
     }
 }
+
 
 .cart{
     width: 100%;

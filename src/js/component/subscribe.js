@@ -5,7 +5,8 @@ import PropTypes from "prop-types";
 export const Subscribe = props => {
 	return (
 		<div className="container">
-			<p>Welcome to Puzzle Swap! We are pleased to have you here. </p>
+			<h4>Welcome to Puzzle Swap!</h4>
+			<p>It&apos;s good to see you. </p>
 			<b />
 			<p>
 				In order to ship and receive puzzles, a subscription of $5.99/month is required as well as an upload and
@@ -13,11 +14,13 @@ export const Subscribe = props => {
 			</p>
 			<b />
 			<p>
-				Please subscribe in order to start your Puzzle Swap experience.
+				Please click subscribe in order to start your Puzzle Swap experience.
+				<br />
+				<i>[This is a demonstration of using the Paypal API, not intended for actual payment.]</i>
 				<p />
 			</p>
 			<b />
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 				<input type="hidden" name="cmd" value="_s-xclick" />
 				<input type="hidden" name="hosted_button_id" value="U9HQFHCLC8YEJ" />
 				<input

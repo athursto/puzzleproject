@@ -26,73 +26,36 @@ export const MyNavbar = () => {
 				<i className="fas fa-puzzle-piece" />
 				&nbsp;
 				<Navbar.Brand href="#home" className="font-weight-bold text-success">
-					<Link to="/">PUZZLE SWAP</Link>
+					{store.user.token != null && loggedIn ? (
+						<Link to="/main">Puzzle Swap</Link>
+					) : (
+						<Link to="/">Puzzle Swap</Link>
+					)}
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
-				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="mr-6 ml-auto" />
-
-					{/* search bar removed since search does not function yet */}
-
-					<NavDropdown alignRight title="Menu" id="basic-nav-dropdown">
-						{store.user.token != null && loggedIn ? (
-							<NavDropdown.Item>
-								<Link to="/profile">Profile</Link>
-							</NavDropdown.Item>
-						) : null}
-
-						{store.user.token != null && loggedIn ? (
-							<NavDropdown.Item>
-								<Link to="/puzzles">Browse Puzzles</Link>
-							</NavDropdown.Item>
-						) : null}
-
-						{/* {loggedIn ? (
+				{/* <Navbar.Collapse id="basic-navbar-nav"> */}
+				<Nav className="mr-6 ml-auto" />
+				{/* search bar removed since search does not function yet */}
+				{/* <NavDropdown alignRight title="Menu" id="basic-nav-dropdown"> */}
+				{store.user.token != null && loggedIn ? <Link to="/profile">Profile</Link> : null}
+				{store.user.token != null && loggedIn ? <Link to="/main">Browse Puzzles</Link> : null}
+				{/* {loggedIn ? (
 							<NavDropdown.Item>
 								<Link to="/shipping/">Shipping</Link>
 							</NavDropdown.Item>
 						) : null} */}
-
-						{store.user.token != null && loggedIn ? (
-							<NavDropdown.Item>
-								<Link to="/track">Track Your Order</Link>
-							</NavDropdown.Item>
-						) : null}
-
-						{store.user.token != null && loggedIn ? (
-							<NavDropdown.Item>
-								<Link to="/swap">Upload Your Puzzle</Link>
-							</NavDropdown.Item>
-						) : null}
-
-						{store.user.token != null && loggedIn ? (
-							<NavDropdown.Item>
-								<Link to="/subscribe">Subscribe</Link>
-							</NavDropdown.Item>
-						) : null}
-
-						{store.user.token != null && loggedIn ? (
-							<NavDropdown.Item>
-								<Link to="/report">Contact Us</Link>
-							</NavDropdown.Item>
-						) : null}
-
-						{store.user.token != null ? (
-							<NavDropdown.Item onClick={() => actions.logout()}>
-								<Link to="/signin">Logout </Link>
-							</NavDropdown.Item>
-						) : (
-							<NavDropdown.Item>
-								<Link to="/signin">Sign In </Link>
-							</NavDropdown.Item>
-						)}
-						{store.user.token != null && loggedIn ? null : (
-							<NavDropdown.Item>
-								<Link to="/registerpage">Register</Link>
-							</NavDropdown.Item>
-						)}
-					</NavDropdown>
-				</Navbar.Collapse>
+				{store.user.token != null && loggedIn ? <Link to="/track">Track Your Order</Link> : null}
+				{store.user.token != null && loggedIn ? <Link to="/swap">Upload Your Puzzle</Link> : null}
+				{store.user.token != null && loggedIn ? <Link to="/subscribe">Subscribe</Link> : null}
+				{store.user.token != null && loggedIn ? <Link to="/report">Contact Us</Link> : null}
+				{store.user.token != null ? (
+					<Link onClick={() => actions.logout()} to="/signin">
+						Logout{" "}
+					</Link>
+				) : (
+					<Link to="/signin">Sign In </Link>
+				)}
+				{store.user.token != null && loggedIn ? null : <Link to="/registerpage">Register</Link>}
 				{store.user.token != null && loggedIn ? (
 					// <span>{cart.length}</span>
 					<Link to="/swapcart">

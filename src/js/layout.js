@@ -15,11 +15,12 @@ import { Track } from "./component/track";
 import { Subscribe } from "./component/subscribe";
 import { Swap } from "./views/swap";
 import { ModalBox } from "./component/modalbox";
-import { Report } from "./views/report";
 import { Swapcart } from "./views/swapcart";
 import { Profile } from "./views/profile";
 import { Confirmation } from "./views/confirmation";
 import { Pending } from "./views/pending";
+import { Homev2 } from "./views/redesign";
+import { Reportv2 } from "./views/report_copy";
 
 //create your first component
 const Layout = () => {
@@ -52,7 +53,7 @@ const Layout = () => {
 					{/* <div> */}
 					<Switch>
 						<Route exact path="/">
-							<Home />
+							<Homev2 />
 						</Route>
 						<Route exact path="/puzzles">
 							<Puzzles />
@@ -73,7 +74,7 @@ const Layout = () => {
 						</Route>
 
 						<Route exact path="/report">
-							<Report />
+							<Reportv2 />
 						</Route>
 						<Route exact path="/track">
 							<Track />
@@ -93,8 +94,11 @@ const Layout = () => {
 						<Route exact path="/pending">
 							<Pending />
 						</Route>
+						<Route exact path="/main">
+							<Home />
+						</Route>
 						<Route>
-							<h1>Not found!</h1>
+							<h4>Not found!</h4>
 						</Route>
 					</Switch>
 					{/* </div> */}

@@ -53,7 +53,7 @@ export const Singlepuzzle = props => {
 						<Card.Body>
 							<Row className="d-flex justify-content-center">
 								<Card.Title>
-									<h2>{store.puzzleFetch[id].name_of_puzzle}</h2>
+									<h3 className="white-bg">{store.puzzleFetch[id].name_of_puzzle}</h3>
 								</Card.Title>
 							</Row>
 							<Row>
@@ -81,17 +81,16 @@ export const Singlepuzzle = props => {
 										{store.user.info != null && store.user.info.puzzles_owned.length > 0 ? (
 											<React.Fragment>
 												<Button
-													variant="success"
+													className="button-redesign text-center"
 													onClick={() => {
 														actions.addtoCart(store.puzzleFetch[id]);
 														history.push("/swapcart");
-													}}
-													className="text-center">
+													}}>
 													Add to Cart
 												</Button>
 											</React.Fragment>
 										) : (
-											<Button variant="success" onClick={e => history.push("/swap")}>
+											<Button className="button-redesign" onClick={e => history.push("/swap")}>
 												Please Upload Your Puzzle to start SWAPING
 											</Button>
 										)}
